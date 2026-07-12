@@ -1,0 +1,44 @@
+iata,city,country,region
+SYD,Sydney,Australia,Australia & NZ
+MEL,Melbourne,Australia,Australia & NZ
+BNE,Brisbane,Australia,Australia & NZ
+ADL,Adelaide,Australia,Australia & NZ
+AKL,Auckland,New Zealand,Australia & NZ
+CHC,Christchurch,New Zealand,Australia & NZ
+SIN,Singapore,Singapore,Southeast Asia
+KUL,Kuala Lumpur,Malaysia,Southeast Asia
+BKK,Bangkok,Thailand,Southeast Asia
+CGK,Jakarta,Indonesia,Southeast Asia
+DPS,Denpasar,Indonesia,Southeast Asia
+SGN,Ho Chi Minh City,Vietnam,Southeast Asia
+HAN,Hanoi,Vietnam,Southeast Asia
+MNL,Manila,Philippines,Southeast Asia
+HKG,Hong Kong,Hong Kong,East Asia
+TPE,Taipei,Taiwan,East Asia
+ICN,Seoul,South Korea,East Asia
+NRT,Tokyo,Japan,East Asia
+KIX,Osaka,Japan,East Asia
+PVG,Shanghai,China,East Asia
+PEK,Beijing,China,East Asia
+CAN,Guangzhou,China,East Asia
+DEL,Delhi,India,South Asia
+BOM,Mumbai,India,South Asia
+CMB,Colombo,Sri Lanka,South Asia
+DXB,Dubai,United Arab Emirates,Middle East
+DOH,Doha,Qatar,Middle East
+AUH,Abu Dhabi,United Arab Emirates,Middle East
+LHR,London,United Kingdom,Europe
+CDG,Paris,France,Europe
+FRA,Frankfurt,Germany,Europe
+AMS,Amsterdam,Netherlands,Europe
+FCO,Rome,Italy,Europe
+MAD,Madrid,Spain,Europe
+IST,Istanbul,Turkey,Europe
+ZRH,Zurich,Switzerland,Europe
+JNB,Johannesburg,South Africa,Africa
+CAI,Cairo,Egypt,Africa
+JFK,New York,United States,Americas
+LAX,Los Angeles,United States,Americas
+SFO,San Francisco,United States,Americas
+YVR,Vancouver,Canada,Americas
+YYZ,Toronto,Canada,Americas

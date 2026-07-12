@@ -7,6 +7,10 @@ from today, returning 7 days later). If the cache has nothing for those exact
 dates, we fall back to the whole departure month and mark the row "ok_flex"
 so strict and flexible observations stay distinguishable.
 
+Because every Aviasales website keeps its own cache per market, the month
+fallback walks through several markets (au, us, gb, ru) and keeps the first
+hit. The market that supplied each price is recorded in the row.
+
 One tidy row per destination per day is appended to data/prices.csv and the
 raw API responses are archived under data/raw/<snapshot_date>/.
 
@@ -43,6 +47,7 @@ CURRENCY = "aud"
 DAYS_AHEAD = 30          # target departure is 30 days from snapshot date
 STAY_NIGHTS = 7          # target return is 7 days after departure
 LIMIT = 30               # offers per request, cheapest first
+MARKETS = ["au", "us", "gb", "ru"]   # caches to try, in order
 REQUEST_PAUSE_SECONDS = 0.6
 MAX_RETRIES = 3
 
@@ -63,6 +68,7 @@ FIELDNAMES = [
     "outbound_duration_min",
     "return_duration_min",
     "offers_returned",
+    "market",
     "status",
 ]
 
@@ -84,6 +90,7 @@ def query_prices(
     destination: str,
     departure_at: str,
     return_at: str | None,
+    market: str | None = None,
 ) -> dict | None:
     """Call prices_for_dates with retries. Returns parsed JSON or None."""
     params = {
@@ -98,6 +105,8 @@ def query_prices(
     }
     if return_at:
         params["return_at"] = return_at
+    if market:
+        params["market"] = market
     headers = {"X-Access-Token": token, "Accept-Encoding": "gzip, deflate"}
     for attempt in range(1, MAX_RETRIES + 1):
         try:
@@ -147,8 +156,26 @@ def load_routes() -> list[dict]:
         return list(csv.DictReader(fh))
 
 
+def migrate_schema_if_needed() -> None:
+    """Rewrite prices.csv when the column set changed (adds blank new columns)."""
+    if not PRICES_FILE.exists():
+        return
+    with open(PRICES_FILE, newline="", encoding="utf-8") as fh:
+        reader = csv.DictReader(fh)
+        if reader.fieldnames == FIELDNAMES:
+            return
+        old_rows = list(reader)
+    log.info("Migrating prices.csv to the new column set")
+    with open(PRICES_FILE, "w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(fh, fieldnames=FIELDNAMES, extrasaction="ignore")
+        writer.writeheader()
+        for row in old_rows:
+            writer.writerow({key: row.get(key, "") for key in FIELDNAMES})
+
+
 def append_rows(rows: list[dict]) -> None:
     PRICES_FILE.parent.mkdir(parents=True, exist_ok=True)
+    migrate_schema_if_needed()
     is_new = not PRICES_FILE.exists()
     with open(PRICES_FILE, "a", newline="", encoding="utf-8") as fh:
         writer = csv.DictWriter(fh, fieldnames=FIELDNAMES)
@@ -193,30 +220,39 @@ def main() -> None:
             "currency": CURRENCY.upper(),
         }
 
+        attempts: dict[str, dict | None] = {}
+
+        # 1. Exact dates in the default market for the origin.
         exact = query_prices(session, token, dest, departure, return_)
+        attempts["exact"] = exact
         flat = cheapest_offer_row(exact) if exact else None
-        status = "ok"
-        fallback = None
+        status, market = "ok", "default"
 
+        # 2. Whole departure month, walking through the market caches.
         if flat is None:
-            # Nothing cached for the exact dates, try the whole departure month.
-            time.sleep(REQUEST_PAUSE_SECONDS)
-            fallback = query_prices(session, token, dest, departure_month, None)
-            flat = cheapest_offer_row(fallback) if fallback else None
             status = "ok_flex"
+            for mkt in MARKETS:
+                time.sleep(REQUEST_PAUSE_SECONDS)
+                fallback = query_prices(session, token, dest, departure_month, None, mkt)
+                attempts[f"month_{mkt}"] = fallback
+                flat = cheapest_offer_row(fallback) if fallback else None
+                if flat is not None:
+                    market = mkt
+                    break
 
-        if exact is None and fallback is None:
+        if all(v is None for v in attempts.values()):
             errors += 1
             rows.append({**base, "status": "error"})
-            log.error("%s: request failed after retries", dest)
+            log.error("%s: every request failed after retries", dest)
         elif flat is None:
             rows.append({**base, "status": "no_data"})
-            log.info("%s: nothing in cache", dest)
+            log.info("%s: nothing in any market cache", dest)
         else:
-            rows.append({**base, **flat, "status": status})
-            log.info("%s: %s %s (%s)", dest, flat["price_total"], flat["currency"], status)
+            rows.append({**base, **flat, "market": market, "status": status})
+            log.info("%s: %s %s (%s, market %s)",
+                     dest, flat["price_total"], flat["currency"], status, market)
 
-        archive_raw(snapshot_date, dest, {"exact": exact, "fallback": fallback})
+        archive_raw(snapshot_date, dest, attempts)
         time.sleep(REQUEST_PAUSE_SECONDS)
 
     append_rows(rows)

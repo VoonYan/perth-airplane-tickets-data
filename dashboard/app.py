@@ -1,7 +1,9 @@
 """Streamlit dashboard for Perth airfare tracking.
 
-Reads data/prices.csv (local checkout) or falls back to the raw file on
-GitHub, then shows current prices, trends over time and route details.
+Built to run live on Streamlit Community Cloud. It always reads the freshest
+data straight from the GitHub repository, so every daily commit made by the
+pipeline shows up on the live dashboard within the cache window. If GitHub is
+unreachable it falls back to the local checkout copy.
 
 Run locally with:  streamlit run dashboard/app.py
 """
@@ -15,20 +17,23 @@ import plotly.express as px
 import streamlit as st
 
 LOCAL_CSV = Path(__file__).resolve().parents[1] / "data" / "prices.csv"
-# Update the URL below if the repository name or owner changes.
+# The live data source. Update if the repository owner or name changes.
 GITHUB_CSV = (
-    "https://raw.githubusercontent.com/OWNER/perth-airplane-tickets-data/main/data/prices.csv"
+    "https://raw.githubusercontent.com/VoonYan/perth-airplane-tickets-data/main/data/prices.csv"
 )
 
 st.set_page_config(page_title="Perth Airfare Tracker", page_icon="✈️", layout="wide")
 
 
-@st.cache_data(ttl=3600)
+@st.cache_data(ttl=1800)
 def load_data() -> pd.DataFrame:
-    if LOCAL_CSV.exists():
-        df = pd.read_csv(LOCAL_CSV)
-    else:
+    """Remote first so the live app always shows the latest committed data."""
+    try:
         df = pd.read_csv(GITHUB_CSV)
+    except Exception:  # noqa: BLE001
+        if not LOCAL_CSV.exists():
+            raise
+        df = pd.read_csv(LOCAL_CSV)
     df["snapshot_date"] = pd.to_datetime(df["snapshot_date"])
     df["price_total"] = pd.to_numeric(df["price_total"], errors="coerce")
     return df

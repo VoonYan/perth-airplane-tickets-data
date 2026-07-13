@@ -2,6 +2,7 @@
 
 This repository is a small end to end data pipeline that watches the cost of flying out of Perth. Every day it asks the Aviasales Data API, provided by Travelpayouts, what a return ticket costs from Perth to 43 major cities around the world, saves the answers, and slowly builds up a history of airfares that you can actually analyse.
 
+**[Live Dashboard](https://perth-airplane-tickets-data-yhtucre247rq7eje2pmsfw.streamlit.app/)**
 ## The question it answers
 
 If I book a trip from Perth about a month in advance, what does it cost, and how does that price move over time? Each daily snapshot looks for a departure 30 days ahead with a 7 day stay, one adult, prices in Australian dollars. Because the booking window is always the same, prices from different days are directly comparable, which is what makes the time series useful.

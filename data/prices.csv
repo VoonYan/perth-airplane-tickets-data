@@ -214,3 +214,46 @@ snapshot_date,origin,destination,city,country,region,departure_date,return_date,
 2026-07-15,PER,SFO,San Francisco,United States,Americas,2026-08-14,2026-08-21,AUD,,,,,,,,,no_data
 2026-07-15,PER,YVR,Vancouver,Canada,Americas,2026-08-14,2026-08-21,AUD,,,,,,,,,no_data
 2026-07-15,PER,YYZ,Toronto,Canada,Americas,2026-08-14,2026-08-21,AUD,,,,,,,,,no_data
+2026-07-16,PER,SYD,Sydney,Australia,Australia & NZ,2026-08-04,2026-08-06,AUD,488.0,JQ,0,0,245,305,2,au,ok_flex
+2026-07-16,PER,MEL,Melbourne,Australia,Australia & NZ,2026-08-04,2026-08-06,AUD,518.0,JQ,0,0,215,260,7,au,ok_flex
+2026-07-16,PER,BNE,Brisbane,Australia,Australia & NZ,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,ADL,Adelaide,Australia,Australia & NZ,2026-08-01,2026-08-04,AUD,424.0,JQ,0,0,170,195,1,au,ok_flex
+2026-07-16,PER,AKL,Auckland,New Zealand,Australia & NZ,2026-08-11,2026-08-13,AUD,1173.0,JQ,2,1,520,495,1,au,ok_flex
+2026-07-16,PER,CHC,Christchurch,New Zealand,Australia & NZ,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,SIN,Singapore,Singapore,Southeast Asia,2026-08-17,2026-08-24,AUD,457.0,TR,0,0,320,310,2,au,ok_flex
+2026-07-16,PER,KUL,Kuala Lumpur,Malaysia,Southeast Asia,2026-08-16,2026-09-13,AUD,345.0,AK,0,0,335,335,1,au,ok_flex
+2026-07-16,PER,BKK,Bangkok,Thailand,Southeast Asia,2026-08-12,2026-09-22,AUD,529.0,TR,1,1,475,460,1,au,ok_flex
+2026-07-16,PER,CGK,Jakarta,Indonesia,Southeast Asia,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,DPS,Denpasar,Indonesia,Southeast Asia,2026-08-16,2026-09-04,AUD,334.0,JQ,0,0,220,225,10,au,ok_flex
+2026-07-16,PER,SGN,Ho Chi Minh City,Vietnam,Southeast Asia,2026-08-09,2026-08-15,AUD,482.0,VJ,0,0,395,415,3,au,ok_flex
+2026-07-16,PER,HAN,Hanoi,Vietnam,Southeast Asia,2026-08-10,2026-08-17,AUD,576.0,VJ,1,1,525,520,2,au,ok_flex
+2026-07-16,PER,MNL,Manila,Philippines,Southeast Asia,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,HKG,Hong Kong,Hong Kong,East Asia,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,TPE,Taipei,Taiwan,East Asia,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,ICN,Seoul,South Korea,East Asia,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,NRT,Tokyo,Japan,East Asia,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,KIX,Osaka,Japan,East Asia,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,PVG,Shanghai,China,East Asia,2026-08-03,2026-08-09,AUD,783.0,AK,1,1,655,675,1,au,ok_flex
+2026-07-16,PER,PEK,Beijing,China,East Asia,2026-08-03,2026-08-11,AUD,840.0,SQ,1,1,700,695,4,au,ok_flex
+2026-07-16,PER,CAN,Guangzhou,China,East Asia,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,DEL,Delhi,India,South Asia,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,BOM,Mumbai,India,South Asia,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,CMB,Colombo,Sri Lanka,South Asia,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,DXB,Dubai,United Arab Emirates,Middle East,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,DOH,Doha,Qatar,Middle East,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,AUH,Abu Dhabi,United Arab Emirates,Middle East,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,LHR,London,United Kingdom,Europe,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,CDG,Paris,France,Europe,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,FRA,Frankfurt,Germany,Europe,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,AMS,Amsterdam,Netherlands,Europe,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,FCO,Rome,Italy,Europe,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,MAD,Madrid,Spain,Europe,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,IST,Istanbul,Turkey,Europe,2026-08-01,2026-08-04,AUD,1456.0,AK,1,2,1000,1180,1,au,ok_flex
+2026-07-16,PER,ZRH,Zurich,Switzerland,Europe,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,JNB,Johannesburg,South Africa,Africa,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,CAI,Cairo,Egypt,Africa,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,JFK,New York,United States,Americas,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,LAX,Los Angeles,United States,Americas,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,SFO,San Francisco,United States,Americas,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,YVR,Vancouver,Canada,Americas,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data
+2026-07-16,PER,YYZ,Toronto,Canada,Americas,2026-08-15,2026-08-22,AUD,,,,,,,,,no_data

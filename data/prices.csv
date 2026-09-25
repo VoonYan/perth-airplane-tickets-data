@@ -3267,3 +3267,46 @@ snapshot_date,origin,destination,city,country,region,departure_date,return_date,
 2026-09-24,PER,SFO,San Francisco,United States,Americas,2026-10-24,2026-10-31,AUD,,,,,,,,,no_data
 2026-09-24,PER,YVR,Vancouver,Canada,Americas,2026-10-24,2026-10-31,AUD,,,,,,,,,no_data
 2026-09-24,PER,YYZ,Toronto,Canada,Americas,2026-10-24,2026-10-31,AUD,,,,,,,,,no_data
+2026-09-25,PER,SYD,Sydney,Australia,Australia & NZ,2026-10-01,2026-10-03,AUD,1318.0,VA,1,1,280,360,2,au,ok_flex
+2026-09-25,PER,MEL,Melbourne,Australia,Australia & NZ,2026-10-25,2026-11-01,AUD,,,,,,,,,no_data
+2026-09-25,PER,BNE,Brisbane,Australia,Australia & NZ,2026-10-01,2026-10-04,AUD,1460.0,JQ,1,0,345,330,1,au,ok_flex
+2026-09-25,PER,ADL,Adelaide,Australia,Australia & NZ,2026-10-09,2026-10-16,AUD,576.0,VA,1,0,300,215,1,au,ok_flex
+2026-09-25,PER,AKL,Auckland,New Zealand,Australia & NZ,2026-10-06,2026-10-21,AUD,1338.0,VA,1,1,435,520,1,au,ok_flex
+2026-09-25,PER,CHC,Christchurch,New Zealand,Australia & NZ,2026-10-25,2026-11-01,AUD,,,,,,,,,no_data
+2026-09-25,PER,SIN,Singapore,Singapore,Southeast Asia,2026-10-05,2026-10-15,AUD,542.0,OD,1,1,405,400,7,au,ok_flex
+2026-09-25,PER,KUL,Kuala Lumpur,Malaysia,Southeast Asia,2026-10-15,2026-10-24,AUD,338.0,AK,0,0,335,335,10,au,ok_flex
+2026-09-25,PER,BKK,Bangkok,Thailand,Southeast Asia,2026-10-16,2026-10-31,AUD,474.0,TR,1,1,475,465,12,au,ok_flex
+2026-09-25,PER,CGK,Jakarta,Indonesia,Southeast Asia,2026-10-15,2026-10-22,AUD,501.0,TR,1,1,435,430,5,au,ok_flex
+2026-09-25,PER,DPS,Denpasar,Indonesia,Southeast Asia,2026-10-25,2026-11-01,AUD,458.0,QZ,0,0,235,220,15,default,ok
+2026-09-25,PER,SGN,Ho Chi Minh City,Vietnam,Southeast Asia,2026-10-16,2026-10-31,AUD,493.0,AK,1,1,455,435,8,au,ok_flex
+2026-09-25,PER,HAN,Hanoi,Vietnam,Southeast Asia,2026-10-27,2026-11-15,AUD,488.0,AK,1,1,535,545,3,au,ok_flex
+2026-09-25,PER,MNL,Manila,Philippines,Southeast Asia,2026-10-12,2026-10-29,AUD,578.0,AK,1,1,570,545,2,au,ok_flex
+2026-09-25,PER,HKG,Hong Kong,Hong Kong,East Asia,2026-10-22,2026-10-30,AUD,771.0,VJ,1,1,555,575,1,au,ok_flex
+2026-09-25,PER,TPE,Taipei,Taiwan,East Asia,2026-10-25,2026-11-01,AUD,,,,,,,,,no_data
+2026-09-25,PER,ICN,Seoul,South Korea,East Asia,2026-10-22,2026-10-26,AUD,764.0,AK,2,2,745,790,3,au,ok_flex
+2026-09-25,PER,NRT,Tokyo,Japan,East Asia,2026-10-12,2026-10-18,AUD,1032.0,OD,1,1,785,775,3,au,ok_flex
+2026-09-25,PER,KIX,Osaka,Japan,East Asia,2026-10-15,2026-11-10,AUD,950.0,VJ,1,2,725,890,2,au,ok_flex
+2026-09-25,PER,PVG,Shanghai,China,East Asia,2026-10-29,2026-11-13,AUD,750.0,VJ,1,1,635,680,5,au,ok_flex
+2026-09-25,PER,PEK,Beijing,China,East Asia,2026-10-02,2026-10-17,AUD,1033.0,OD,2,2,815,790,6,au,ok_flex
+2026-09-25,PER,CAN,Guangzhou,China,East Asia,2026-10-01,2026-10-16,AUD,770.0,TR,1,1,570,580,8,au,ok_flex
+2026-09-25,PER,DEL,Delhi,India,South Asia,2026-10-25,2026-11-01,AUD,,,,,,,,,no_data
+2026-09-25,PER,BOM,Mumbai,India,South Asia,2026-10-25,2026-11-01,AUD,,,,,,,,,no_data
+2026-09-25,PER,CMB,Colombo,Sri Lanka,South Asia,2026-10-25,2026-11-01,AUD,,,,,,,,,no_data
+2026-09-25,PER,DXB,Dubai,United Arab Emirates,Middle East,2026-10-17,2026-10-23,AUD,1126.0,TR,2,2,885,890,3,au,ok_flex
+2026-09-25,PER,DOH,Doha,Qatar,Middle East,2026-10-25,2026-11-01,AUD,,,,,,,,,no_data
+2026-09-25,PER,AUH,Abu Dhabi,United Arab Emirates,Middle East,2026-10-25,2026-11-01,AUD,,,,,,,,,no_data
+2026-09-25,PER,LHR,London,United Kingdom,Europe,2026-10-22,2026-10-30,AUD,1457.0,AK,2,2,1210,1190,2,au,ok_flex
+2026-09-25,PER,CDG,Paris,France,Europe,2026-10-25,2026-11-01,AUD,,,,,,,,,no_data
+2026-09-25,PER,FRA,Frankfurt,Germany,Europe,2026-10-25,2026-11-01,AUD,,,,,,,,,no_data
+2026-09-25,PER,AMS,Amsterdam,Netherlands,Europe,2026-10-25,2026-11-01,AUD,,,,,,,,,no_data
+2026-09-25,PER,FCO,Rome,Italy,Europe,2026-10-09,2026-10-23,AUD,1449.0,AK,3,2,1250,1115,2,au,ok_flex
+2026-09-25,PER,MAD,Madrid,Spain,Europe,2026-10-25,2026-11-01,AUD,,,,,,,,,no_data
+2026-09-25,PER,IST,Istanbul,Turkey,Europe,2026-10-25,2026-11-01,AUD,,,,,,,,,no_data
+2026-09-25,PER,ZRH,Zurich,Switzerland,Europe,2026-10-25,2026-11-01,AUD,,,,,,,,,no_data
+2026-09-25,PER,JNB,Johannesburg,South Africa,Africa,2026-10-25,2026-11-01,AUD,,,,,,,,,no_data
+2026-09-25,PER,CAI,Cairo,Egypt,Africa,2026-10-25,2026-11-01,AUD,,,,,,,,,no_data
+2026-09-25,PER,JFK,New York,United States,Americas,2026-10-12,2026-10-18,AUD,1797.0,OD,2,2,1635,1540,1,au,ok_flex
+2026-09-25,PER,LAX,Los Angeles,United States,Americas,2026-10-25,2026-11-01,AUD,,,,,,,,,no_data
+2026-09-25,PER,SFO,San Francisco,United States,Americas,2026-10-25,2026-11-01,AUD,,,,,,,,,no_data
+2026-09-25,PER,YVR,Vancouver,Canada,Americas,2026-10-25,2026-11-01,AUD,,,,,,,,,no_data
+2026-09-25,PER,YYZ,Toronto,Canada,Americas,2026-10-25,2026-11-01,AUD,,,,,,,,,no_data
